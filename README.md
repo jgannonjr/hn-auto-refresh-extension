@@ -1,0 +1,1 @@
+A simple Chrome extensions to automatically refresh Hacker News on a set interval via AJAX.

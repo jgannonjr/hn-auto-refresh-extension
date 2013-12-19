@@ -1,0 +1,48 @@
+<html>
+<head><title>Hacker News Auto Refresh options</title></head>
+
+<body>
+<h1>Hacker News Auto-refresh options</h1>
+<div id="options" style="display:none">
+  <h3>Timing settings</h3>
+  <p>
+    Please be nice when setting a refresh rate, and only use what you need.  The minimum
+    value is 30 seconds.<br>
+    <i>NOTE: if the tab is inactive it won't continuously refresh in the background
+    until you naviagate back to it.</i>
+  </p>
+  <div>
+    Refresh interval: <input type="text" id="refresh_interval_secs"></input> seconds
+  </div>
+  <h3>Animation settings</h3>
+  <p>
+    Choose the animation you would like to enable upon a successful refresh, or uncheck the box to disable the animation completely:<br>
+    This animation affects the YC logo.
+  </p>
+  <div>
+    <input type="checkbox" id="animation_enabled" checked> Animation enabled on refresh
+  </div>
+  <div>
+    Refresh animation:
+    <select id="animation">
+     <option value="flash">flash</option>
+     <option value="bounce">bounce</option>
+     <option value="shake">shake</option>
+     <option value="tada">tada</option>
+     <option value="swing">swing</option>
+     <option value="wobble">wobble</option>
+     <option value="pulse">pulse</option>
+    </select>
+  </div>
+  <i>The refresh animations are the "Attention Seekers" from <a href="https://daneden.me/animate/">Animate.css</a> by <a href="http://twitter.com/_dte">Dan Eden</a>.
+  <br>
+  <br>
+  <div id="status"></div>
+  <button id="save">Save</button>
+</div>
+<br><br><br>
+<i>built by <a href="http://johnnygannon.net">Johnny Gannon</a>.
+<script src="options.js"></script>
+</body>
+
+</html>
