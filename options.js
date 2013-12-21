@@ -23,6 +23,18 @@ var save_options = function() {
   });
 };
 
+// Clears everything from the sync storage
+var reset_options = function() {
+  chrome.storage.sync.clear(function() {
+    update_and_show_page();
+    var status = document.getElementById('status');
+    status.innerHTML = 'Options Reset.';
+    setTimeout(function() {
+      status.innerHTML = '';
+    }, 1000);
+  });
+};
+
 // Restores select box state to saved value from chrome.storage.sync.
 var update_and_show_page = function() {
   chrome.storage.sync.get(
@@ -45,3 +57,4 @@ var update_and_show_page = function() {
 
 document.addEventListener('DOMContentLoaded', update_and_show_page);
 document.querySelector('#save').addEventListener('click', save_options);
+document.querySelector('#reset').addEventListener('click', reset_options);
